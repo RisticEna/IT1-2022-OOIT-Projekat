@@ -40,7 +40,6 @@ public class Point {
 	
 	public boolean equals(Object obj) {
 		if (obj instanceof Point) {
-			// down castovanje - konverziju object u Point
 			Point drugaTacka = (Point) obj;
 			if (this.xCoord == drugaTacka.xCoord && 
 					this.yCoord == drugaTacka.yCoord)
@@ -49,6 +48,11 @@ public class Point {
 		return false;
 	}
 	
+	public boolean contains(int x, int y) {
+		if (this.distance(x, y) <= 2)
+			return true;
+		return false;
+	}
 	
 	
 	
