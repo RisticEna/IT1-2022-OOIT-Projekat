@@ -33,6 +33,27 @@ public class Point {
 		double d = Math.sqrt(dx * dx + dy * dy);
 		return d;
 	}
+	
+	public String toString() {
+		return "("+ xCoord + "," + yCoord + "), selected = " + selected;
+	}
+	
+	public boolean equals(Object obj) {
+		if (obj instanceof Point) {
+			// down castovanje - konverziju object u Point
+			Point drugaTacka = (Point) obj;
+			if (this.xCoord == drugaTacka.xCoord && 
+					this.yCoord == drugaTacka.yCoord)
+				return true;
+		}
+		return false;
+	}
+	
+	
+	
+	
+	
+	
 
 	public int getXCoord() {
 		return xCoord;

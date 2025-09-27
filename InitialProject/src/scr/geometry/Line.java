@@ -23,6 +23,32 @@ public class Line {
 		return d;
 	}
 	
+	public String toString() {
+		return startPoint.toString() + "-->" + endPoint;
+	}
+	
+	public boolean equals(Object obj) {
+		if (obj instanceof Line) {
+			Line pomocna = (Line) obj;
+			if (this.startPoint.equals(pomocna.startPoint)
+					&& this.endPoint.equals(pomocna.endPoint)
+					&& this.selected == pomocna.selected)
+				return true;
+		}
+		return false;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	public Point getStartPoint() {
 		return this.startPoint;
 	}

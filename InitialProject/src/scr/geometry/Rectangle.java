@@ -27,6 +27,29 @@ public class Rectangle {
 		return 2*width + 2*height;
 	}
 	
+	public String toString() {
+		return "Upper left point: " + upperLeftPoint + ", width = " + width + ", height = " + height;
+	}
+	public boolean equals(Object obj) {
+		if (obj instanceof Rectangle) {
+			Rectangle pomocna = (Rectangle) obj;
+			if (this.upperLeftPoint.equals(pomocna.upperLeftPoint) && this.width == pomocna.width
+					&& this.height == pomocna.height)
+				return true;
+			else
+				return false;
+		} else
+			return false;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	public Point getUpperLeftPoint() {
 		return upperLeftPoint;
 	}
