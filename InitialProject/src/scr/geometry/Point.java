@@ -1,12 +1,25 @@
 package scr.geometry;
 
 public class Point {
-	// atributi klase
-	// enkapsulacija
 	private int xCoord;
 	private int yCoord;
 	private boolean selected;
-
+	
+	public Point() {
+	}
+	
+	public Point(int xCoord, int yCoord) {
+		this.xCoord = xCoord;
+		this.yCoord = yCoord;
+	}
+	
+	public Point(int xCoord, int yCoord, boolean selected) {
+		// this.xCoord = xCoord;
+		// this.yCoord = yCoord;
+		this(xCoord, yCoord);
+		this.selected = selected;
+	}
+	
 	public double distance(Point point2) {
 		double dx = xCoord - point2.xCoord;
 		double dy = this.yCoord - point2.yCoord;

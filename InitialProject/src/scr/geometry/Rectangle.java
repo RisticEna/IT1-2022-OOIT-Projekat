@@ -5,8 +5,21 @@ public class Rectangle {
 	private int width;
 	private int height;
 	private boolean selected;
+
+	public Rectangle() {
+	}
+
+	public Rectangle(Point upperLeftPoint, int width, int height) {
+		this.upperLeftPoint = upperLeftPoint;
+		this.width = width;
+		this.height = height;
+	}
+
+	public Rectangle(Point upperLeftPoint, int width, int height, boolean selected) {
+		this(upperLeftPoint, width, height);
+		this.selected = selected;
+	}
 	
-	//povrsina i obim
 	public int area() {
 		return width * height;
 	}
@@ -14,7 +27,6 @@ public class Rectangle {
 		return 2*width + 2*height;
 	}
 	
-	//metode pristupa 
 	public Point getUpperLeftPoint() {
 		return upperLeftPoint;
 	}
